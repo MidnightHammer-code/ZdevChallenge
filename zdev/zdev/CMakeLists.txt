@@ -22,6 +22,8 @@ include_directories(
     ${GLM_INCLUDE_DIRS}
 )
 
+include_directories(/usr/include/stb)
+
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME}
