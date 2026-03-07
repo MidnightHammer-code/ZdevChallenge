@@ -1,5 +1,6 @@
 #include "../../include/HammerEngine/HammerEngine.h"
 #include <glm/ext/vector_float3.hpp>
+#include <iostream>
 #include <vector>
 #include <glm/glm.hpp>
 
@@ -21,8 +22,8 @@ int main() {
     HammerEngine Engine;
 
 
-    for (int x = 0; x < 350; x++) {
-        for (int y = 0; y < 350; y++) {
+    for (int x = 0; x < 500; x++) {
+        for (int y = 0; y < 500; y++) {
             uint32_t offset = static_cast<uint32_t>(vertices.size());
 
             vertices.push_back({{-0.5f + x, -0.5f + y, 0.0f}, {1.0f, 0.0f, 0.0f}, {0.0000f, 0.0625f}}); // Bottom Left
@@ -49,7 +50,7 @@ int main() {
     Engine.texturePath = "textures/texture.png";
     Engine.cameraPosition = glm::vec3(0,0,2);
     Engine.cameraMode(0);
-    Engine.cameraSpeed = 0.1;
+    Engine.cameraSpeed = 1;
     Engine.drawMod(0);
     Engine.triangleMode = true;
 
